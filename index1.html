@@ -10,6 +10,73 @@
     <link href="./CSS/moreduo.css" rel="stylesheet" type="text/css"/>
     <link href="./CSS/font-awesome.min.css" rel="stylesheet" type="text/css"/>
     <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1"/>
+	<style>
+		@keyframes spin{
+	0%{transform:rotateY(0deg) rotateX(0deg) rotateZ(0deg);}
+	20%{transform:rotateY(90deg) rotateX(0deg) rotateZ(0deg);}
+	40%{transform:rotateY(180deg) rotateX(0deg) rotateZ(0deg);}
+	60%{transform:rotateY(270deg) rotateX(0deg) rotateZ(0deg);}
+	80%{transform:rotateY(180deg) rotateX(0deg) rotateZ(90deg);}
+	100%{transform:rotateY(90deg) rotateX(0deg) rotateZ(180deg);}
+	
+	}
+.stag{
+	width:100px;
+	height:100px;
+	margin:15px auto;
+	position:relative;
+	background-color:#fff;
+	padding:0px;
+	border:0px solid #8ec63f;
+	}
+.conta{
+	margin:15px auto;
+	margin-left:0px;
+	margin-top:0px;
+	
+	position:absolute;
+	transform:translateZ(-50px);
+	transform-style:preserve-3d;
+	width:100px;
+	height:100px;
+	animation:spin 5s linear infinite;
+	animation-fill-mode:forwards; 
+	padding:0px;
+	border:0px solid #8ec63f;
+}
+.conta:hover{
+	
+}
+.sid{
+	padding:0px;
+	border:0px solid #8ec63f;
+	font-size:60px;
+	font-weight:bold;
+	color:#fff;
+	height:100px;
+	position:absolute;
+	width:100px;
+}
+.front{
+	transform: translateZ(50px);
+}
+.back{
+	transform: translateZ(-50px);
+
+}
+.left{
+	transform: rotateY(-90deg) translateZ(50px);
+}
+.right{
+	transform: rotateY(90deg) translateZ(50px);
+}
+.top{
+	transform: rotateX(90deg) translateZ(50px);
+}
+.bottom{
+	transform: rotateX(90deg) translateZ(-50px);
+}
+	</style>
 </head>
 <body>
 <aside class="sidebar">
@@ -50,6 +117,28 @@
             </div>
         </div>
     </section>
+<div class="stag">
+			<div class="conta">
+				<div class="sid front">
+					<img src="./img/zf_cube1.png" width="100px;" height="100px;"/>
+				</div>
+				<div class="sid back">
+					<img src="./img/zf_cube2.png" width="100px;" height="100px;"/>
+				</div>
+				<div class="sid left">
+					<img src="./img/zf_cube3.png" width="100px;" height="100px;"/>
+				</div>
+				<div class="sid right">
+					<img src="./img/zf_cube4.png" width="100px;" height="100px;"/>
+				</div>
+				<div class="sid top">
+					<img src="./img/zf_cube5.png" width="100px;" height="100px;"/>
+				</div>
+				<div class="sid bottom">
+					<img src="./img/zf_cube6.png" width="100px;" height="100px;"/>
+				</div>
+			</div>
+		</div>
     <section id="skills">
         <div class="wrap">
             <h2 class="title">掌握的技能</h2>
