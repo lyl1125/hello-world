@@ -1,1 +1,358 @@
-ada
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Swiper demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/swiper.min.css">
+    <link rel="stylesheet" href="./css/animate.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html, body {
+            position: relative;
+            height: 100%;
+        }
+        body {
+            background: #eee;
+            color:#000;
+            margin: 0;
+            padding: 0;
+        }
+        .top-title{
+            width: 100%;
+            text-align: center;
+            color: rgba(0,0,0,.7);
+        }
+        .news{
+            width: 9rem;
+            padding: 9px;
+            margin: 0 auto;
+            font-size: 2.8rem;
+            text-align: center;
+            border-radius: 50%;
+            border: .5rem solid #fff;
+            box-shadow: 0 0 7px rgba(0,0,0,.15);
+            background: rgba(14,25,145,.06);
+        }
+        .tips{
+            margin-top: 15px;
+            font-size: 2rem;
+            color: rgba(0,0,0,.4);
+        }
+        .home-img{
+            width: 80%;
+            margin-top: 16%;
+        }
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+        }
+        .swiper-slide {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: rgba(0,0,0,.01)
+        }
+        .row{
+            margin: 4% 0;
+            text-align: center;
+        }
+        .img-li{
+            width: 45%;
+        }
+        .ww-img{
+            height: 130px;
+            width: 35%;
+            margin-right: 1rem;
+            border-radius: 50%;
+        }
+        h3{
+            margin: 0 0 10%;
+            font-size: 2.5rem;
+            text-align: center;
+        }
+        .row p{
+            text-align: left;
+            margin: 5% 0;
+        }
+        .verse-list li{
+            line-height: 35px;
+        }
+        .flow{
+            display: flex;
+        }
+        .flow ul{
+            width: 50%;
+            margin: .5rem;
+        }
+        .flow img{
+            width: 100%;
+            margin-bottom: .5rem;
+            border-radius: 7px;
+            box-shadow: 0 0 3px rgba(0,0,0,.5);
+        }
+        .person-wrap{
+            display: flex;
+            overflow-x: scroll;;
+            width: 85%;
+            height: 53%;
+        }
+        .hd-wrap{
+            height: 100%;
+            margin: 0 2vw 0 0;
+            padding: 8px 15px;
+            color: rgba(0,0,0,.7);
+            border-radius: 5px;
+            box-shadow: inset 0 0 5px rgba(0,0,0,.3);
+        }
+        .hd-wrap ul{
+            width: 66vw;
+        }
+        .hd-wrap ul li{
+            line-height: 31px;
+        }
+        .bang{
+            width: 80%;
+            margin-top: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0,0,0,.1);
+        }
+        .arrow-box{
+            position: absolute;
+            bottom: -45px;
+            height: 80px;
+            width: 50%;
+            text-align: center;
+            border-radius: 100%;
+            background: rgba(255,255,255,.18);
+        }
+        .arrow{
+            width: 20px;
+            height: 15px;
+            margin-top: 16px;
+            -webkit-animation: start 1.5s infinite ease-in-out;
+            animation: start 1.5s infinite ease-in-out;
+        }
+        @keyframes start {
+            0%,100%{
+                margin-top: 16px;
+            }
+            50%{
+                margin-top: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+<audio autoplay>
+    <source id="myaudio" src="void/mzdhl.mp3" loop="loop">
+</audio>
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <div class="top-title">
+                <p class="news ani" swiper-animate-effect="rotateIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">个人简历</p>
+                <p class="tips">RUA</p>
+            </div>
+			<img class="img-li ani" swiper-animate-effect="zoomInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.6s" src="./img/67.ong">
+            
+            <div class="arrow-box">
+                <img class="arrow" src="./img/arrow.png"/>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <h3 class="ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">个人资料</h3>
+            <div class="person-wrap ani"  swiper-animate-effect="rotateInUpLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">
+                <div class="hd-wrap">
+                    <h4>个人信息</h4>
+                    <ul class="list-unstyled">
+                        <li>
+                            <span>姓名：</span>
+                            <span>陆易龙</span>
+                        </li>
+                        <li>
+                            <span>性别：</span>
+                            <span>男</span>
+                        </li>
+                        <li>
+                            <span>年龄：</span>
+                            <span>22</span>
+                        </li>
+                        <li>
+                            <span>学校：</span>
+                            <span>杭州电子科技大学信息工程学院</span>
+                        </li>
+                        <li>
+                            <span>居住地：</span>
+                            <span>现居杭州</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="hd-wrap">
+                    <h4>主修课程</h4>
+                    <ul class="list-unstyled">
+                        <li>
+                            <span>通信原理</span>
+                            <span>信号与系统</span>
+                        </li>
+                        <li>
+                            <span>模拟电子技术</span>
+                            <span>数字逻辑电路</span>
+                        </li>
+                        <li>
+                            <span>信息论与编码</span>
+                            <span>三网融合</span>
+                        </li>
+                        <li>
+                            <span>接入网技术</span>
+                            <span>通信电子电路</span>
+                        </li>
+                        <li>
+                            <span>C语言</span>
+                            <span>C++</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="hd-wrap">
+                    <h4>校内实践</h4>
+                    <ul class="list-unstyled">
+                        <li>
+                            <span>在学校实验室工作一学期</span>
+                            
+                        </li>
+                        <li>
+                            <span>担任班级学习委员<br>
+							对内与团支书密切配合</span>
+                            
+                        </li>
+                        <li>
+                            <span>分配、支持、督促和检查班干部<br>
+							的工作展开情况及模范带头作用</span>
+                            
+                        </li>
+                       
+                    </ul>
+                </div>
+               
+                
+            </div>
+            <div class="arrow-box">
+                <img class="arrow" src="./img/arrow.png">
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="container">
+                <h3 class="ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">技能</h3>
+                  <div class="row">
+                      <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
+                          <img class="img-li ani" swiper-animate-effect="zoomInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0.6s" src="./img/img1.jpg">
+                      </div>
+                      <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
+                          <p class="ani" swiper-animate-effect="bounceInRight" swiper-animate-duration="0.5s" swiper-animate-delay="0.6s">计算机：<br>
+                         计算机二级证书，熟练操作<br>
+                         windows 平台上的各类应用软件<br>
+						 英语能力：<br>
+                          大学英语 4 级</p>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
+                          <img class="img-li ani"  swiper-animate-effect="fadeInDownBig" swiper-animate-duration="0.8s" swiper-animate-delay="0.9s" src="./img/img2.jpg">
+                      </div>
+                      <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
+                          <p class="ani" swiper-animate-effect="rotateInUpRight" swiper-animate-duration="0.10s" swiper-animate-delay="0.9s">熟悉Java（面向对象、异常、线程、IO 流、集合框架、网络编程、反射等）<br>
+                         对 C 语言、.net 和C++有一定的了解<br>
+						 HTML 5
+                        熟悉 HTML5 网站的架构和开发<br>
+						CSS3
+                        熟悉使用 CSS3 写响应式网站、动画等<br></p>
+                      </div>
+                  </div>
+            </div>
+            <div class="arrow-box">
+                <img class="arrow" src="./img/arrow.png">
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="container">
+                <h3 class="ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.15s" swiper-animate-delay="0.3s">职业目标</h3>
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6" style="display: flex;justify-content: center; align-items: center; margin-bottom: 12px">
+                        <img class="ww-img ani" swiper-animate-effect="rotateInDownLeft" swiper-animate-duration="0.15s" swiper-animate-delay="0.5s" src="./img/17.jpg"/>
+                        <div class="ani" swiper-animate-effect="bounceInRight" swiper-animate-duration="0.15s" swiper-animate-delay="0.7s">
+                            <span style="display:inline-block; font-size: 2.5rem; margin-bottom: 6px">有梦是好事</span><br>
+                            <span>万一见鬼了呢</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
+                        <h4 class="ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.15s" swiper-animate-delay="0.15s">先定他个小目标<small> 我先赚它一个亿</small></h4>
+                        <ul class="list-unstyled verse-list ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.15s" swiper-animate-delay="0.9s">
+                            <li>悔创阿里杰克马</li>
+							<li>一无所有王健林</li>
+                            <li>不知妻美刘强东</li>
+							 <li>普通家庭马化腾</li>
+							 <li>随便挣钱丁三石</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="arrow-box">
+                <img class="arrow" src="./img/arrow.png">
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <h3 class="ani" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">自我评价</h3>
+            <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
+                        <h4 class="ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.15s" swiper-animate-delay="0.15s">胖哥哥<small>吃香香鸡吗</small></h4>
+                        <ul class="list-unstyled verse-list ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.15s" swiper-animate-delay="0.9s">
+                            <li>1.通信工程专业本科，专业知识扎实</li>
+                            <li>2.具备良好的策划与组织能力，较强的分析、提炼和表达能力</li>
+                            <li>3.较强文字的组织能力和方案策划能力，能独立制作各种售前文档和解决方案文档</li>  
+							<li>4.能够完成确认客户需求，推进项目进程、提供合理的解决方案、方案演示等工作</li>
+                            <li>5.注重团队合作，有强烈的上进心、敬业精神和创新意识和积极主动的学习能力</li> 
+                        </ul>
+                    </div>
+            <div class="arrow-box">
+                <img class="arrow" src="./img/arrow.png">
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="top-title">
+                <p class="news ani" swiper-animate-effect="rotateIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">联系方式</p>
+				    <ul align="center"><li>电话：18758860873</li>
+							 <li>QQ：767980948</li>
+                            <li>微信：18758860873</li>
+                            <li>邮箱：767980948@qq.com</li> </ul>
+                <p class="tips">静候您的佳音</p>
+            </div>
+            <img class="bang ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.5s" swiper-animate-delay="0.13s" src="./img/111.jpg">
+        </div>
+    </div>
+</div>
+<script src="./js/swiper.min.js"></script>
+<script src="./js/swiper.animate.min.js"></script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        direction: 'vertical',
+        slidesPerView: 1,
+        paginationClickable: true,
+        spaceBetween: 30,
+        mousewheelControl: true,
+        onInit: function(swiper){ //Swiper2.x的初始化是onFirstInit
+            swiperAnimateCache(swiper); //隐藏动画元素
+            swiperAnimate(swiper); //初始化完成开始动画
+        },
+        onSlideChangeEnd: function(swiper){
+            swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+        }
+    });
+</script>
+</body>
+</html>
